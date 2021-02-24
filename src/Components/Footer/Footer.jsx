@@ -2,6 +2,7 @@ import "./Footer.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
 
+import {Link} from "react-router-dom"
 import Logo from '../../img/site-bottom-logo.png'
 
 function Footer() {
@@ -18,26 +19,26 @@ function Footer() {
     <div className="container">
       <div className="footer-wrapper">
         <div className="footer-left">
-          <a className="site-footer-link" href="index.html">
+          <Link className="site-footer-link" to="/">
             <img className="site-footer-img" src={Logo} alt="site-logo" width="80" height="100" />
-          </a>
+          </Link>
           <p className="site-footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error neque perferendis accusamus scipit, dolore laudantium aperiam tempora nemo itaque doloremque reprehenderit!</p>
         </div>
           <ul className="footer-mid-list">
             <li className="footer-mid-item">
-              <a className="footer-mid-link" href="#">{TEXT.home}</a>
+              <Link className="footer-mid-link" to="/">{TEXT.home}</Link>
             </li>
             <li className="footer-mid-item">
-              <a className="footer-mid-link" href="#">{TEXT.aboutMe}</a>
+              <Link className="footer-mid-link" to="/about">{TEXT.aboutMe}</Link>
             </li>
             <li className="footer-mid-item">
-              <a className="footer-mid-link" href="#">{TEXT.portfolio}</a>
+            <Link className="footer-mid-link" to="/portfolio">{TEXT.portfolio}</Link>
             </li>
             <li className="footer-mid-item">
               <a className="footer-mid-link" href="#">{TEXT.blog}</a>
             </li>
             <li className="footer-mid-item">
-              <a className="footer-mid-link" href="#">{TEXT.contact}</a>
+            <Link className="footer-mid-link" to="/contact">{TEXT.contact}</Link>
             </li>
           </ul>
           <ul className="social-list">
