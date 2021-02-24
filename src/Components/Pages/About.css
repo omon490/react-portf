@@ -1,0 +1,114 @@
+
+.about-me{
+  padding: 50px 0;
+  position: relative;
+  height: 100vh;
+  background-image: url("../../img/section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-img{
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 200px);
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.about-img:hover{
+  transform: scale(1.05) skewY(3deg) rotate(3deg);
+}
+
+.about-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-me-list{
+  padding: 0;
+  margin: 0;
+  margin-top: 140px;
+  margin-left: 300px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.about-me-item{
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.about-name{
+  margin-left: 30px;
+}
+
+.about-age{
+  margin-left: 5px;
+}
+
+.about-email{
+  margin-left: -20px;
+}
+
+.about-adress{
+  margin-left: -20px;
+}
+
+.about-subject{
+  margin-left: -15px;
+}
+
+.about-freelance{
+  margin-left: -5px;
+}
+
+.about-me-feature{
+  padding: 0;
+  margin: 0;
+  margin-top: 140px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about-me-feature-item{
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.about-omon{
+  margin-left: -30px;
+}
+
+.about-25{
+  margin-left: 5px;
+}
+
+.about-me-feature-link{
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
+.about-choshtepa{
+  margin-left: -5px;
+}
+
+.about-junior{
+  margin-left: -15px;
+}
+
+.about-date{
+  margin-left: -30px;
+}

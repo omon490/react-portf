@@ -1,0 +1,71 @@
+
+#contact-form{
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.contact-heading{
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.contact-heading-text{
+  color: #f7c08a;
+}
+
+.contact-text{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form{
+  padding: 25px;
+  width: 100%;
+  background-color: #f7c08a;
+}
+
+.input, .textarea{
+  border: none;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.button{
+  padding: 10px 25px;
+  text-align: center;
+  margin-left: calc(50% - 55px);
+  font-weight: bold;
+  display: inline-block;
+  border: 3px solid transparent;
+  background-color: rgba(85, 48, 18, 0.527);
+  transition: background-color 0.5s ease;
+}
+
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+.hvr-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
+  -webkit-animation-name: hvr-buzz;
+  animation-name: hvr-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}

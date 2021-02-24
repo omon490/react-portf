@@ -1,9 +1,8 @@
-import "./Main.css"
+import "./Home.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
 
-
-function Main() {
+function Home () {
 
   const [language, setLanguage] = useLanguage()
 
@@ -11,9 +10,9 @@ function Main() {
 
   const languageChange = e => setLanguage(e.target.value)
 
-return (
-<>
-  <section className="intro-section">
+  return(
+    <>
+     <section className="intro-section">
     <div className="container">
       <div className="intro-wrapper">
         <div className="intro-heading-wrapper">
@@ -37,8 +36,8 @@ return (
       </div>
     </div>
   </section>
-</>
-)
+    </>
+  )
 }
 
-export default Main
+export default Home

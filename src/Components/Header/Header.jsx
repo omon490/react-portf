@@ -2,6 +2,8 @@ import "./Header.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
 
+import {Link} from "react-router-dom"
+
 
 import Logo from "../../img/site-bottom-logo.png"
 
@@ -24,13 +26,13 @@ function Header() {
         <nav className="navbar">
           <ul className="navbar-list">
             <li className="navbar-item navbar-item-active">
-              <a className="navbar-link" href="index.html">{TEXT.home}</a>
+              <Link className="navbar-link" to="/">{TEXT.home}</Link>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="about.html">{TEXT.aboutMe}</a>
+              <Link className="navbar-link" to="/about">{TEXT.aboutMe}</Link>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="portfolio.html">{TEXT.portfolio}</a>
+              <Link className="navbar-link" to="/portfolio">{TEXT.portfolio}</Link>
               <ul className="sub-menu">
                 <li className="sub-menu-item">
                   <a className="sub-menu-link" href="#">Trafalgar</a>
@@ -74,7 +76,7 @@ function Header() {
               <a className="navbar-link" href="blog.html">{TEXT.blog}</a>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="contact.html">{TEXT.contact}</a>
+              <Link className="navbar-link" to="/contact">{TEXT.contact}</Link>
             </li>
             <li className="navbar-item">
               <div className="select">
