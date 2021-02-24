@@ -1,0 +1,227 @@
+.container{
+  max-width: 1240px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header{
+  padding: 35px 0;
+  background-image: url("../../img/codes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+.site-header-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.site-header-link{
+  display: block;
+  text-decoration: none;
+  margin-right: auto;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.site-header-link:hover{
+  transform: scale(1.9);
+}
+
+.site-logo{
+  display: block;
+}
+
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navbar-list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navbar-item{
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.navbar-link{
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(255, 253, 253);
+}
+
+.navbar-link::after{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-item-active .navbar-link::after{
+  background-color: #fffdfd;
+}
+
+.navbarlink:active::after{
+  display: none;
+}
+
+.navbar-item:hover .sub-menu{
+  display: block;
+}
+
+.sub-menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: -27%;
+  border-radius: 5px;
+  box-shadow: 0 4px 24px rgba(5, 5, 5, 0.411);
+  background-color: rgb(47, 224, 236);
+  white-space: nowrap;
+  animation-name: sub-menu;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sub-menu{
+ 0%{
+opacity: 0;
+   transform: rotateY(-90deg) translateY(30px);
+ }
+ 100%{
+   opacity: 1;
+   transform: rotateY(0deg) translateY(0px);
+ }
+}
+
+.sub-menu-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sub-menu-link{
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.sub-menu-link:hover{
+  background-color: rgb(26, 99, 95);
+}
+
+.sub-menu-link:active{
+  background: rgba(26, 99, 95, 0.897);
+  opacity: 0.6;
+}
+
+.tel-link{
+  display: block;
+  text-decoration: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: #fff;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-color: rgb(36, 109, 119);
+  transition: background-color 0.5s ease;
+}
+
+.tel-link:hover{
+  background-color: rgba(13, 238, 238, 0.664);
+  color: rgb(36, 109, 119);
+  font-weight: 600;
+  border-radius: 8px;
+  border: 3px solid rgb(36, 109, 119);
+}
+
+.tel-link:active{
+  background-color: rgba(17, 212, 212, 0.459);
+}
+
+/* Reset Select */
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  /* display: none; */
+}
+
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 7em;
+  height: 3em;
+  line-height: 3;
+  background-color: #527190;
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.5s all ease;
+}
+
+/* Transition */
+.select:hover::after {
+  color: #12f3ce;
+}

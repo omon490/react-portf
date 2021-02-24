@@ -1,0 +1,68 @@
+.intro-section{
+  padding-top: 95px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-size: 600px 500px;
+  background-position: calc(50% + 300px);
+  background-image: url("../../img/illustration-4-removebg.png");
+}
+
+.intro-wrapper{
+  width: 500px;
+}
+
+.intro-heading{
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Cinzel", "Arial", serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.intro-text{
+  margin: 0;
+  font-size: 20px;
+}
+
+.intro-youtube{
+  padding-top: 85px;
+  padding-bottom: 85px;
+  background-image: url("../../img/youtube-illustration-removebg.png");
+  background-repeat: no-repeat;
+  background-size: auto 375px;
+  background-position: calc(50% - 100px) calc(50% + 80px);
+}
+
+.intro-youtube-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.heading-wrapper{
+  width: 700px;
+}
+
+.intro-youtube-heading{
+  font-family: "Cinzel", "Arial", serif;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.intro-youtube-text{
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.youtube-video{
+  border: none;
+  border-radius: 20px;
+  margin-top: 40px;
+}

@@ -1,0 +1,120 @@
+
+#site-footer{
+  background-color: rgb(46, 43, 43);
+  padding: 25px;
+}
+
+.footer-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-left{
+  width: 500px;
+}
+
+.site-footer-link{
+  display: block;
+}
+
+.site-footer-img{
+  display: block;
+  margin-bottom: 30px;
+}
+
+.site-footer-text{
+  margin: 0;
+  line-height: 28px;
+  font-size: 15px;
+}
+
+.footer-mid-list{
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  list-style-type: none;
+  margin-left: 200px;
+}
+
+.footer-mid-link{
+  display: block;
+  padding:  0 0 8px;
+  text-decoration: none;
+  color: #fff;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.footer-mid-link:hover{
+  color: rgb(25, 165, 187);
+  transform: scale(1.2);
+}
+
+.footer-mid-link:active{
+  color: rgb(49, 86, 92);
+}
+
+.social-list{
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  list-style-type: none;
+  margin-left: 150px;
+}
+
+.social-link{
+  display: flex;
+  align-items: center;
+  padding:  0 0 10px;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: #fff;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.social-link:hover{
+  color: rgb(25, 165, 187);
+  transform: scale(1.2);
+}
+
+.social-link:active{
+  color: rgb(49, 86, 92);
+}
+
+.social-link::before{
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.telegram::before{
+  background-image: url("../../img/telegram-icon/telegram-icon.png");
+  background-size: 50px;
+}
+
+.facebook::before{
+  background-image: url("../../img/facebook/facebook.png");
+  background-size: 20px;
+}
+
+.twitter::before{
+  background-image: url("../../img/twitter/twitter.png");
+  background-size: 50px;
+}
+
+.github::before{
+  background-image: url("../../img/github.png");
+  border-radius: 50%;
+}
+
+.linkedin::before{
+  background-image: url("../../img/linkedin.webp");
+}
