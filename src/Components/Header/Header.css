@@ -225,3 +225,7 @@ select {
 .select:hover::after {
   color: #12f3ce;
 }
+
+.option {
+  font-size: 15px;
+}

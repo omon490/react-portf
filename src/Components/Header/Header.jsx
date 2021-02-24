@@ -80,9 +80,9 @@ function Header() {
               <div className="select">
               <select className="navbar-select" defaultValue={language}
               onChange={languageChange}>
-                <option value="en">English</option>
-                <option value="ru">Русский</option>
-                <option value="uz">O'zbek</option>
+                <option className="option" value="en">English</option>
+                <option className="option" value="ru">Русский</option>
+                <option className="option" value="uz">O'zbek</option>
               </select>
               </div>
             </li>
