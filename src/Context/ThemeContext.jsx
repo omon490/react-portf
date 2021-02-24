@@ -15,8 +15,6 @@ function ThemeProvider({ children }) {
 
 		window.localStorage.setItem("theme", theme)
 
-		console.log(theme)
-
 	}, [theme])
 
 	return (

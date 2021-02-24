@@ -14,13 +14,12 @@ function Footer() {
 
   const languageChange = e => setLanguage(e.target.value)
 
-  const [theme] = useTheme()
+  // const [theme] = useTheme()
 
   return (
     <>
       <footer id="site-footer">
     <div className="container">
-      <h1>{theme}</h1>
       <div className="footer-wrapper">
         <div className="footer-left">
           <Link className="site-footer-link" to="/">
