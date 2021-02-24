@@ -1,6 +1,7 @@
 import "./Footer.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
+import { useTheme } from "../../Context/ThemeContext"
 
 import {Link} from "react-router-dom"
 import Logo from '../../img/site-bottom-logo.png'
@@ -13,10 +14,13 @@ function Footer() {
 
   const languageChange = e => setLanguage(e.target.value)
 
+  const [theme] = useTheme()
+
   return (
     <>
       <footer id="site-footer">
     <div className="container">
+      <h1>{theme}</h1>
       <div className="footer-wrapper">
         <div className="footer-left">
           <Link className="site-footer-link" to="/">

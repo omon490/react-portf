@@ -1,9 +1,9 @@
 import "./Header.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
+import { useTheme } from "../../Context/ThemeContext"
 
 import {Link} from "react-router-dom"
-
 
 import Logo from "../../img/site-bottom-logo.png"
 
@@ -14,6 +14,8 @@ function Header() {
   const TEXT = Localization[language]
 
   const languageChange = e => setLanguage(e.target.value)
+
+  const [theme, setTheme] = useTheme()
 
   return (
 <>
@@ -85,6 +87,18 @@ function Header() {
                 <option className="option" value="en">English</option>
                 <option className="option" value="ru">Русский</option>
                 <option className="option" value="uz">O'zbek</option>
+              </select>
+              </div>
+            </li>
+
+
+
+            <li className="navbar-item">
+              <div className="select">
+              <select className="navbar-select" defaultValue={theme}
+              onChange={e => setTheme(e.target.value)}>
+                <option className="option" value="light">Light</option>
+                <option className="option" value="dark">Dark</option>
               </select>
               </div>
             </li>

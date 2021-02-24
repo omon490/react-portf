@@ -3,8 +3,11 @@ import React, {createContext, useState, useContext} from 'react'
 const LanguageContext = createContext()
 
 function Language ({children}) {
+
   const [lang, setLang] = useState("en")
+
   const value = {lang, setLang}
+
   return(
     <>
       <LanguageContext.Provider value={value}>
@@ -15,6 +18,7 @@ function Language ({children}) {
 }
 
 function useLanguage () {
+
   const {lang, setLang} = useContext(LanguageContext)
 
   return [lang, setLang]

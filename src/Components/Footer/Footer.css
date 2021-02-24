@@ -4,6 +4,10 @@
   padding: 25px;
 }
 
+#site-footer.dark {
+  background-color: #fff;
+}
+
 .footer-wrapper{
   display: flex;
   flex-wrap: wrap;
