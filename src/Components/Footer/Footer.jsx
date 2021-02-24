@@ -1,7 +1,7 @@
 import "./Footer.css"
 import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
-import { useTheme } from "../../Context/ThemeContext"
+// import { useTheme } from "../../Context/ThemeContext"
 
 import {Link} from "react-router-dom"
 import Logo from '../../img/site-bottom-logo.png'

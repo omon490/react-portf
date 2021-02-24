@@ -103,6 +103,7 @@ function Header() {
               </div>
             </li>
           </ul>
+
           <a className="tel-link" href="tel:+9984901174">+998 97 490 11 74</a>
         </nav>
       </div>
