@@ -20,12 +20,12 @@ function Header() {
   <header className="site-header">
     <div className="container">
       <div className="site-header-wrapper">
-        <a className="site-header-link" href="index.html">
+        <Link className="site-header-link" to="/">
           <img className="site-logo" src={Logo} alt="site-logo" width="80" height="100" />
-        </a>
+        </Link>
         <nav className="navbar">
           <ul className="navbar-list">
-            <li className="navbar-item navbar-item-active">
+            <li className="navbar-item"> {/* navbar-item-active */}
               <Link className="navbar-link" to="/">{TEXT.home}</Link>
             </li>
             <li className="navbar-item">
