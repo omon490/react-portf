@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Portfolio from './Pages/Portfolio'
 import Contact from './Pages/Contact';
+import Blog from './Pages/Blog';
 
 import { Switch, Route } from "react-router-dom"
 
@@ -31,6 +32,10 @@ function App() {
 
           <Route path="/contact" exact>
             <Contact></Contact>
+          </Route>
+
+          <Route path="/blog" exact>
+            <Blog></Blog>
           </Route>
         </Switch>
 

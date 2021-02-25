@@ -38,7 +38,7 @@ function Footer() {
             <Link className="footer-mid-link" to="/portfolio">{TEXT.portfolio}</Link>
             </li>
             <li className="footer-mid-item">
-              <a className="footer-mid-link" href="#">{TEXT.blog}</a>
+            <Link className="footer-mid-link" to="/blog">{TEXT.blog}</Link>
             </li>
             <li className="footer-mid-item">
             <Link className="footer-mid-link" to="/contact">{TEXT.contact}</Link>

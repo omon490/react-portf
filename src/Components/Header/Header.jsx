@@ -75,7 +75,7 @@ function Header() {
               </ul>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="blog.html">{TEXT.blog}</a>
+              <Link className="navbar-link" to="/blog">{TEXT.blog}</Link>
             </li>
             <li className="navbar-item">
               <Link className="navbar-link" to="/contact">{TEXT.contact}</Link>
