@@ -1,16 +1,8 @@
 import "./Blog.css"
-import {useLanguage} from '../../Context/Language'
-import Localization from '../../Localization'
-import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { Link, Switch, Route } from "react-router-dom"
 
 function Blog() {
-
-  const [language, setLanguage] = useLanguage()
-
-  const TEXT = Localization[language]
-
-  const languageChange = e => setLanguage(e.target.value)
 
   const [data, setData] = useState({
 
@@ -35,28 +27,39 @@ function Blog() {
 
   return (
     <>
-		<ul>
-		{ data.loading && <>Loading...</> }
-		{ data.error && <>{data.error}</> }
-		{ !data.loading &&
+		{data.loading &&
     <>
-			<ul className="blog-list">
-			{
-				data.data.map(post => {
+      <h1 className="container blog-loading">Loading...</h1>
+    </>
+    }
 
-					return <li className="blog-item" key={post.id}>
+	  {data.error &&
+    <>
+      <h1 className="container blog-error">{data.error}</h1>
+    </>
+    }
 
-					{/* <a href={'/post/' + post.id}>{post.title}</a> */}
-          <Link to="/post/2">{post.title}TEST</Link>
-
-					</li>
-				})
+		{!data.loading &&
+    <>
+			<div className="container blog-wrapper">
+			{data.data.map(post => {
+        console.log(post);
+					return (
+            <ul className="blog-list">
+              <li className="blog-item" key={post.id}>
+					      {/* <a href={'/post/' + post.id}>{post.title}</a> */}
+                <Link className="blog-link" to="/post/2">
+                  <h3 className="blog-title">{post.title}</h3>
+                  </Link>
+                  <p className="blog-text">{post.body}</p>
+					    </li>
+            </ul>)
+			})
 			}
-			</ul>
-
-			</>}
-			</ul>
-			</>
+			</div>
+		</>
+    }
+	</>
   )
 }
 

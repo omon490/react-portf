@@ -1,8 +1,33 @@
-.blog-list {
+.blog-wrapper {
   list-style-type: none;
 }
 
+.blog-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .blog-item {
+  width: 40%;
+  border: 1px solid #000;
+  margin-bottom: 5px;
+  padding: 20px;
+}
 
+.blog-link {
+  text-decoration: none;
+}
 
+.blog-title {
+  color: #292929;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.blog-text {
+  font-size: 15px;
+  margin: 0;
+  margin-top: 25px;
 }
