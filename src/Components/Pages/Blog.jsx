@@ -98,10 +98,10 @@ function Blog() {
       <input className="blog-input" type="text" value={id} onChange={e => setId(e.target.value)} />
       <button className="blog-button" type="button" onClick={handleClick}>Fetch Post</button>
 
-      <div className="">
+      <div className="blog-wrapper">
         <ul className="blog-list">
           <li className="blog-item">
-            <Link className="blog-link">{post.title}</Link>
+            <Link className="blog-link" to="/blog">{post.title}</Link>
           </li>
         </ul>
       </div>

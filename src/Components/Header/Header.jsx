@@ -3,7 +3,7 @@ import {useLanguage} from '../../Context/Language'
 import Localization from '../../Localization'
 import { useTheme } from "../../Context/ThemeContext"
 
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 
 import Logo from "../../img/site-bottom-logo.png"
 
@@ -27,14 +27,14 @@ function Header() {
         </Link>
         <nav className="navbar">
           <ul className="navbar-list">
-            <li className="navbar-item"> {/* navbar-item-active */}
-              <Link className="navbar-link" to="/">{TEXT.home}</Link>
+            <li className="navbar-item">
+              <NavLink className="navbar-link" to="/" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.home}</NavLink>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/about">{TEXT.aboutMe}</Link>
+              <NavLink className="navbar-link" to="/about" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.aboutMe}</NavLink>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/portfolio">{TEXT.portfolio}</Link>
+              <NavLink className="navbar-link" to="/portfolio" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.portfolio}</NavLink>
               <ul className="sub-menu">
                 <li className="sub-menu-item">
                   <a className="sub-menu-link" href="#">Trafalgar</a>
