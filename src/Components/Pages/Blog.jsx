@@ -1,113 +1,67 @@
-// import "./Blog.css"
-// import { useState, useEffect } from "react"
-// import { Link, Switch, Route } from "react-router-dom"
+import "./Blog.css"
 
-// function Blog() {
+import { useState, useEffect } from "react"
 
-//   const [data, setData] = useState({
+import { Link, Switch, Route } from "react-router-dom"
 
-// 		loading: true,
-// 		error: null,
-// 		data: [],
-// 	})
+import Post from "../Pages/Post"
 
-//   useEffect(() => {
-
-// 		fetch("https://jsonplaceholder.typicode.com/posts")
-// 		.then(response => response.json())
-// 		.then(data => {
-
-// 			setData({ loading: false, data: data, })
-// 		})
-// 		.catch(error => {
-// 			setData({ error: "xatolik yuz berdi" })
-// 		})
-
-// 	}, [])
-
-//   return (
-//     <>
-// 		{data.loading &&
-//     <>
-//       <h1 className="container blog-loading">Loading...</h1>
-//     </>
-//     }
-
-// 	  {data.error &&
-//     <>
-//       <h1 className="container blog-error">{data.error}</h1>
-//     </>
-//     }
-
-// 		{!data.loading &&
-//     <>
-// 			<div className="container blog-wrapper">
-// 			{data.data.map(post => {
-//         console.log(post);
-// 					return (
-//             <ul className="blog-list">
-//               <li className="blog-item" key={post.id}>
-// 					      {/* <a href={'/post/' + post.id}>{post.title}</a> */}
-//                 <Link className="blog-link" to="/post/2">
-//                   <h3 className="blog-title">{post.title}</h3>
-//                   </Link>
-//                   <p className="blog-text">{post.body}</p>
-// 					    </li>
-//             </ul>)
-// 			})
-// 			}
-// 			</div>
-// 		</>
-//     }
-// 	</>
-//   )
-// }
-
-// export default Blog
-
-
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import loadingEffect from "../../loader/spin.gif"
 
 function Blog() {
+  const [data, setData] = useState({ loading: true, error: null, data: [], })
 
-  const [post, setPost] = useState({})
-
-  const [id, setId] = useState(1)
-
-  const [idFromButtonClick, setIdFromButtonClick] = useState(1)
-
-  const handleClick = () => {
-    setIdFromButtonClick(id)
-  }
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
-      .then(res => {
-        setPost(res.data)
-        console.log(res.data.id);
-        console.log(res.data.title);
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }, [idFromButtonClick])
+
+  ;(async () => {
+
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const posts = await response.json()
+
+    setData({ loading: false, data: posts, })
+
+  })()
+
+}, [])
 
   return (
-    <div className="container">
-      <input className="blog-input" type="text" value={id} onChange={e => setId(e.target.value)} />
-      <button className="blog-button" type="button" onClick={handleClick}>Fetch Post</button>
+<>
 
-      <div className="blog-wrapper">
-        <ul className="blog-list">
-          <li className="blog-item">
-            <Link className="blog-link" to="/blog">{post.title}</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+<Switch>
+
+  <Route path="/blog" exact>
+
+    {
+      data.loading && <img alt="alt" src={loadingEffect} />
+    }
+
+
+    <ul className="container">
+      {
+        !data.loading && (
+          <>
+            {
+              data.data.map(post => {
+
+                return <li key={post.id}>
+                  <Link to={'/post/' + post.id}>{post.title}</Link>
+                </li>
+              })
+            }
+          </>
+        )
+      }
+    </ul>
+  </Route>
+
+  <Route path="/post/:id" exact>
+    <Post></Post>
+  </Route>
+
+</Switch>
+</>
   )
 }
 
 export default Blog
-
