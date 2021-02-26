@@ -26,8 +26,6 @@ function Blog() {
 
   return (
 <>
-
-
 <Switch>
 
   <Route path="/blog" exact>
@@ -60,6 +58,7 @@ function Blog() {
   </Route>
 
 </Switch>
+
 </>
   )
 }
