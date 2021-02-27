@@ -31,8 +31,7 @@ function Home () {
           <p className="intro-youtube-text">{TEXT.introYouTubeText}</p>
         </div>
         <iframe className="youtube-video" width="460" height="315" src="https://www.youtube.com/embed/wxds6MAtUQ0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
     </div>
   </section>
