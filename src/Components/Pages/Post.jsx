@@ -1,3 +1,5 @@
+import "./Post.css"
+
 import loadingEffect from "../../loader/spin.gif"
 
 import React, { useEffect, useState } from "react"
@@ -31,19 +33,22 @@ function Post() {
 	}, [id])
 
   return (
-    <div>
+    <div className="container post-wrapper">
       {
-				post.loading && <img alt="alt" src={loadingEffect} />
+				post.loading && <img className="post-loader" alt="alt" src={loadingEffect} />
 			}
 
+			<div className="post-box">
 			{
 				!post.loading && !post.error && (
 					<>
-						<h1>{post.data.title}</h1>
-						<p>{post.data.body}</p>
+						<h1 className="post-title">{post.data.title}</h1>
+						<p className="post-text">{post.data.body}</p>
 					</>
 				)
 			}
+			</div>
+
 
 			{
 

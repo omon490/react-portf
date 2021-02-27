@@ -28,13 +28,13 @@ function Header() {
         <nav className="navbar">
           <ul className="navbar-list">
             <li className="navbar-item">
-              <NavLink className="navbar-link" to="/" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.home}</NavLink>
+              <NavLink className="navbar-link" to="/" activeClassName="activeRoute" activeStyle={{color: "#fffdfd"}} exact>{TEXT.home}</NavLink>
             </li>
             <li className="navbar-item">
-              <NavLink className="navbar-link" to="/about" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.aboutMe}</NavLink>
+              <NavLink className="navbar-link" to="/about" activeClassName="activeRoute" activeStyle={{color: "#fffdfd"}} exact>{TEXT.aboutMe}</NavLink>
             </li>
             <li className="navbar-item">
-              <NavLink className="navbar-link" to="/portfolio" activeStyle={{fontWeight: "bold", color: "red"}}>{TEXT.portfolio}</NavLink>
+              <NavLink className="navbar-link" to="/portfolio" activeClassName="activeRoute" activeStyle={{color: "#fffdfd"}} exact>{TEXT.portfolio}</NavLink>
               <ul className="sub-menu">
                 <li className="sub-menu-item">
                   <a className="sub-menu-link" href="#">Trafalgar</a>
@@ -75,10 +75,10 @@ function Header() {
               </ul>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/blog">{TEXT.blog}</Link>
+              <NavLink className="navbar-link" to="/blog" activeClassName="activeRoute" activeStyle={{color: "#fffdfd"}} exact>{TEXT.blog}</NavLink>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/contact">{TEXT.contact}</Link>
+              <NavLink className="navbar-link" to="/contact" activeClassName="activeRoute" activeStyle={{color: "#fffdfd"}} exact>{TEXT.contact}</NavLink>
             </li>
             <li className="navbar-item">
               <div className="select">

@@ -6,6 +6,7 @@ import About from './Pages/About'
 import Portfolio from './Pages/Portfolio'
 import Contact from './Pages/Contact';
 import Blog from './Pages/Blog';
+import Post from './Pages/Post'
 
 import { Switch, Route } from "react-router-dom"
 
@@ -36,6 +37,10 @@ function App() {
 
           <Route path="/blog" exact>
             <Blog></Blog>
+          </Route>
+
+          <Route path="/post/:id" exact>
+            <Post></Post>
           </Route>
         </Switch>
 

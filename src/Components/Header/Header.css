@@ -87,9 +87,8 @@
   transition: background-color 0.3s ease;
 }
 
-.navbar-link:hover::after,
-.navbar-item-active .navbar-link::after{
-  background-color: #fffdfd;
+.activeRoute::after {
+  border-bottom: 3px solid #fffdfd;
 }
 
 .navbarlink:active::after{
